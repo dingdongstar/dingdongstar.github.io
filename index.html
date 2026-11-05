@@ -1,1 +1,1521 @@
-welcome!!
+<!-- 檔名：index.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Search Console 驗證標記（請勿刪除） -->
+  <meta name="google-site-verification" content="KojHSjfLowTthWe1ykpd-uFYt1UVp6aB9o0oeNt_jCU" />
+
+  <!-- 網站標題與描述 -->
+  <title>吳佳容 Claire Wu｜行銷公關經理</title>
+  <meta name="description" content="吳佳容（Claire Wu）行銷公關經理，現居宜蘭，專注行銷企劃、媒體公關與活動策劃。具旅宿品牌宣傳及 KOL 內容視角，曾參與百場以上活動。">
+  <meta name="keywords" content="吳佳容, Claire Wu 行銷公關, 宜蘭行銷企劃, 飯店媒體公關, 品牌活動企劃">
+  <meta name="author" content="吳佳容 Claire Wu">
+  <link rel="canonical" href="https://dingdongstar.github.io/">
+
+  <!-- Open Graph 社群分享標籤 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="吳佳容 Claire Wu｜行銷公關經理">
+  <meta property="og:description" content="把創意化為影響力，讓品牌故事被更多人看見。專注旅宿整合行銷、媒體公關與活動策劃。">
+  <meta property="og:url" content="https://dingdongstar.github.io/">
+  <meta property="og:image" content="https://dingdongstar.github.io/share.jpg">
+  <meta property="og:site_name" content="吳佳容 Claire Wu 個人網站">
+
+  <!-- Favicon (Emoji 小圖示) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+
+  <!-- JSON-LD Person 結構化資料 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "吳佳容",
+    "alternateName": "Claire Wu",
+    "jobTitle": "行銷公關經理",
+    "description": "行銷公關經理，結合 KOL 視角與品牌傳播經驗，曾籌辦百場以上活動，擅長企劃、媒體宣傳及執行整合。",
+    "url": "https://dingdongstar.github.io/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "宜蘭",
+      "addressCountry": "TW"
+    },
+    "knowsAbout": ["整合行銷企劃", "媒體公關與新聞稿", "活動策劃與執行", "旅宿品牌宣傳", "內容行銷"]
+  }
+  </script>
+
+  <!-- Google Fonts: 襯線與黑體搭配營造書卷文青感 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS 自訂變數：預設為「深墨綠/炭黑」為主的沉穩文青色調 */
+    :root {
+      --bg-base: #1b2421;           /* 炭黑墨綠 */
+      --bg-surface: #242e2a;        /* 墨綠卡片色 */
+      --bg-alt: #161e1b;            /* 較深底色 */
+      --text-main: #f4f1ea;         /* 暖米白 */
+      --text-muted: #c2bcb0;        /* 柔和米灰 */
+      --accent-gold: #c5a059;       /* 溫潤金棕 */
+      --accent-gold-hover: #d8b26e;
+      --border-color: rgba(244, 241, 234, 0.12);
+      --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      --paper-pattern: radial-gradient(rgba(244, 241, 234, 0.03) 1px, transparent 1px);
+    }
+
+    /* 淺色模式：溫暖紙張肌理米白色系 */
+    body.light-theme {
+      --bg-base: #f7f5f0;           /* 暖米白紙感 */
+      --bg-surface: #ffffff;        /* 純白卡片 */
+      --bg-alt: #ece8df;            /* 溫暖米灰 */
+      --text-main: #1d2522;         /* 炭墨綠字 */
+      --text-muted: #5e6662;        /* 中灰綠 */
+      --accent-gold: #9e7838;       /* 典雅深金 */
+      --accent-gold-hover: #b88d44;
+      --border-color: rgba(29, 37, 34, 0.12);
+      --card-shadow: 0 10px 25px rgba(29, 37, 34, 0.08);
+      --paper-pattern: radial-gradient(rgba(29, 37, 34, 0.04) 1px, transparent 1px);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: var(--bg-base);
+      background-image: var(--paper-pattern);
+      background-size: 20px 20px;
+      color: var(--text-main);
+      line-height: 1.8;
+      font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-serif {
+      font-family: 'Noto Serif TC', serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 導覽列 Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(27, 36, 33, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: background 0.3s ease;
+    }
+    body.light-theme header {
+      background: rgba(247, 245, 240, 0.92);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+    }
+    .avatar-fallback {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      color: #1b2421;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* 功能按鈕 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 22px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-gold {
+      background-color: var(--accent-gold);
+      color: #1a221f;
+      font-weight: 600;
+    }
+    .btn-gold:hover {
+      background-color: var(--accent-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(197, 160, 89, 0.35);
+    }
+    .btn-outline {
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      background: transparent;
+    }
+    .btn-outline:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+    .theme-toggle-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--accent-gold);
+    }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-main);
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    /* 區塊通則 */
+    section {
+      padding: 96px 0;
+      position: relative;
+    }
+    .section-alt {
+      background-color: var(--bg-alt);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .section-header {
+      margin-bottom: 56px;
+      text-align: center;
+    }
+    .section-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    h2.section-title {
+      font-size: 2.2rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* 版型 D: Hero 大字滿版開場 */
+    .hero-section {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 0 80px;
+      position: relative;
+      background: radial-gradient(circle at 50% 20%, rgba(197, 160, 89, 0.08) 0%, transparent 60%);
+    }
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 16px;
+      background: rgba(197, 160, 89, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      border-radius: 40px;
+      color: var(--accent-gold);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+      letter-spacing: 0.05em;
+    }
+    h1.hero-title {
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      margin-bottom: 24px;
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1.hero-title span.text-gold {
+      color: var(--accent-gold);
+      display: inline-block;
+    }
+    .hero-subinfo {
+      font-size: 1.2rem;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hero-intro {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.9;
+    }
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    /* 關於我 (About) */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .about-image-wrap {
+      position: relative;
+    }
+    .about-img-frame {
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--card-shadow);
+    }
+    .about-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-highlight-card {
+      position: absolute;
+      bottom: -24px;
+      right: -20px;
+      background: var(--bg-surface);
+      border: 1px solid var(--accent-gold);
+      padding: 16px 22px;
+      border-radius: 6px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .highlight-number {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      line-height: 1;
+      font-family: 'Noto Serif TC', serif;
+    }
+    .highlight-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+    .about-content h3 {
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+      color: var(--text-main);
+    }
+    .about-text {
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      font-size: 1.02rem;
+    }
+    .quote-box {
+      border-left: 3px solid var(--accent-gold);
+      padding-left: 18px;
+      margin: 24px 0;
+      font-style: normal;
+      color: var(--text-main);
+      background: rgba(197, 160, 89, 0.05);
+      padding: 14px 18px;
+      border-radius: 0 4px 4px 0;
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .pill {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      color: var(--text-main);
+    }
+
+    /* 作品集 (Portfolio) */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-gold);
+    }
+    .project-thumb {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: #111;
+      position: relative;
+    }
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover .project-thumb img {
+      transform: scale(1.04);
+    }
+    .project-category {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(27, 36, 33, 0.88);
+      color: var(--accent-gold);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+    }
+    .project-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .project-body h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+      flex-grow: 1;
+      line-height: 1.7;
+    }
+    .project-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .tool-tag {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      background: var(--bg-alt);
+      color: var(--text-muted);
+      border-radius: 3px;
+    }
+    .card-footer-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 14px;
+      font-size: 0.88rem;
+      color: var(--accent-gold);
+      font-weight: 500;
+    }
+
+    /* 服務項目 (Services) */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 32px 26px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(197, 160, 89, 0.4);
+    }
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+    .service-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+    .service-target {
+      font-size: 0.85rem;
+      color: var(--accent-gold);
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+    .service-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+      line-height: 1.7;
+      flex-grow: 1;
+    }
+    .service-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border-color);
+      padding-top: 14px;
+    }
+
+    /* 經歷時間軸 (Experience) */
+    .timeline-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 32px;
+    }
+    .timeline-wrap::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--border-color);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -32px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      border: 3px solid var(--bg-base);
+    }
+    .timeline-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+    }
+    .timeline-date {
+      display: inline-block;
+      font-size: 0.82rem;
+      padding: 3px 10px;
+      background: rgba(197, 160, 89, 0.12);
+      color: var(--accent-gold);
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .timeline-title {
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+    .timeline-org {
+      font-size: 0.95rem;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+    }
+    .timeline-body {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* 專業知識區 (AEO Knowledge) */
+    .knowledge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .knowledge-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .knowledge-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-gold);
+    }
+    .knowledge-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+    }
+    .knowledge-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+    .knowledge-summary {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .knowledge-btn {
+      align-self: flex-start;
+      color: var(--accent-gold);
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .knowledge-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* 聯絡區 (Contact) */
+    .contact-card {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 56px 40px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+    }
+    .contact-card h2 {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+    .contact-lead {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* 頁尾 Footer */
+    footer {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border-color);
+      padding: 44px 0 32px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* 作品彈出視窗 (Modal) */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .modal-backdrop.active {
+      display: flex;
+      opacity: 1;
+    }
+    .modal-window {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      width: 100%;
+      max-width: 720px;
+      max-height: 90vh;
+      border-radius: 10px;
+      overflow-y: auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+      animation: modalSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalSlide {
+      from { transform: translateY(24px) scale(0.97); }
+      to { transform: translateY(0) scale(1); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .modal-content-wrap {
+      padding: 32px 30px;
+    }
+    .modal-img-wrap {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #111;
+      overflow: hidden;
+      border-radius: 6px;
+      margin-bottom: 24px;
+    }
+    .modal-header-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .modal-badge {
+      font-size: 0.8rem;
+      color: var(--accent-gold);
+      background: rgba(197, 160, 89, 0.12);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .modal-title {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      line-height: 1.35;
+    }
+    .modal-section {
+      margin-bottom: 20px;
+    }
+    .modal-section-title {
+      font-size: 0.95rem;
+      color: var(--accent-gold);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .modal-section-text {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    /* RWD 響應式佈局 (嚴格保證 375px 不橫向溢出) */
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .about-image-wrap {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+      .about-highlight-card {
+        right: 0;
+        bottom: -16px;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .portfolio-grid, .knowledge-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 64px 0;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-surface);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        padding: 24px;
+        gap: 18px;
+        box-shadow: var(--card-shadow);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      h1.hero-title {
+        font-size: 2.1rem;
+      }
+      .hero-subinfo {
+        font-size: 1.05rem;
+      }
+      .contact-card {
+        padding: 36px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 導覽列 -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo" aria-label="回網站首頁">
+        <div class="avatar-fallback" aria-hidden="true" style="overflow: hidden; padding: 0;">
+          <img src="photo.jpg" alt="Claire" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.textContent='吳';">
+        </div>
+        <span>吳佳容 <span style="font-size: 0.85em; opacity: 0.8; font-weight: normal;">Claire Wu</span></span>
+      </a>
+
+      <!-- 電腦與手機導覽清單 -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" onclick="closeNav()">關於我</a></li>
+        <li><a href="#portfolio" onclick="closeNav()">作品集</a></li>
+        <li><a href="#services" onclick="closeNav()">服務項目</a></li>
+        <li><a href="#experience" onclick="closeNav()">經歷</a></li>
+        <li><a href="#knowledge" onclick="closeNav()">專業知識</a></li>
+        <li><a href="#contact" onclick="closeNav()">與我聯絡</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- 深淺色切換鈕 -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="切換網站顏色主題">
+          <span id="themeIcon">☀️</span>
+          <span id="themeLabel">淺色</span>
+        </button>
+        <!-- 手機漢堡選單鈕 -->
+        <button class="menu-toggle" id="menuToggleBtn" aria-label="開啟選單" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. 開場區塊 (Hero: D 大字滿版) -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-tagline">
+          <span>🌿</span>
+          <span>行銷企劃・媒體宣傳・活動策劃</span>
+        </div>
+        
+        <h1 class="hero-title">
+          把創意化為影響力，<br>
+          <span class="text-gold">讓品牌故事</span> 被更多人看見。
+        </h1>
+
+        <div class="hero-subinfo font-serif">
+          <span>吳佳容 Claire Wu</span>
+          <span>｜</span>
+          <span>行銷公關經理</span>
+          <span>｜</span>
+          <span>現居 宜蘭</span>
+        </div>
+
+        <p class="hero-intro">
+          結合 KOL 視角與品牌傳播經驗，曾籌辦百場以上活動，擅長旅宿整合企劃、媒體宣傳及執行整合。
+        </p>
+
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-gold">查看行銷專案</a>
+          <a href="#contact" class="btn btn-outline">下載履歷與聯繫</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 關於我 (About Me) -->
+    <section id="about" class="section-alt">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap">
+            <div class="about-img-frame">
+              <!-- 個人專業代表照 photo.jpg -->
+              <img 
+                src="photo.jpg" 
+                alt="吳佳容 Claire Wu - 行銷公關經理個人照" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://picsum.photos/seed/claire-portrait/800/1000';"
+              />
+            </div>
+            <div class="about-highlight-card">
+              <div class="highlight-number">100+</div>
+              <div class="highlight-label">
+                <strong>場次經驗</strong><br>
+                參與與籌辦活動
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-badge">ABOUT ME</span>
+            <h2 class="section-title" style="text-align: left;">從受眾需求出發，<br>用細緻執行串聯品牌對話</h2>
+            <p class="about-text">
+              目前以飯店品牌行銷與公共關係為核心，業務涵蓋住房、餐飲、活動宣傳、媒體溝通及線上內容企劃。
+            </p>
+            <p class="about-text">
+              實際參與不同類型的活動後，我深刻體會到：<strong>好企劃不只需要吸睛的點子，更需要從受眾需求、執行細節到後續曝光全盤思考</strong>。因此持續把活動現場第一線與媒體公關經驗整合到每一次的品牌行銷工作中。
+            </p>
+            
+            <div class="quote-box font-serif">
+              「先釐清目標與受眾，再提出有創意且可執行的策略；重視資訊正確、跨部門協作與每個對外訊息的品質。」
+            </div>
+
+            <p class="about-text" style="font-size: 0.95rem;">
+              工作之外，我也投入 KOL／自媒體內容創作，習慣用內容經營者與消費者的雙重視角觀察品牌溝通。比起只坐在辦公室想企劃，我更喜歡參與活動第一線，觀察現場反應，再把真實體驗轉化為能傳播的故事。
+            </p>
+
+            <div class="skills-pills">
+              <span class="pill">整合行銷企劃</span>
+              <span class="pill">媒體公關與新聞稿</span>
+              <span class="pill">活動策劃與執行</span>
+              <span class="pill">內容行銷與文案</span>
+              <span class="pill">旅展與專案宣傳</span>
+              <span class="pill">市場與競品觀察</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 作品集 (Portfolio) -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">PORTFOLIO</span>
+          <h2 class="section-title">精選專案與品牌成果</h2>
+          <p class="section-desc">透過跨部門協作、媒體公關切角與精準文案，將品牌亮點具體轉化為市場關注。</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- 作品 1 -->
+          <article class="project-card" onclick="openModal(1)">
+            <div class="project-thumb">
+              <span class="project-category">整合行銷／線上旅展</span>
+              <img 
+                src="work1.jpg" 
+                alt="2026 ITF 線上旅展" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://picsum.photos/seed/travel-fair/800/500';"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="font-serif">2026 ITF 線上旅展｜跨產品整合宣傳</h3>
+              <p class="project-desc">統整住宿券、餐飲券與 SPA 產品資訊，讓旅展檔期優惠更清楚地傳達給不同客群。</p>
+              <div class="project-tools">
+                <span class="tool-tag">官網內容編修</span>
+                <span class="tool-tag">活動文案</span>
+                <span class="tool-tag">資料整理</span>
+                <span class="tool-tag">視覺協作</span>
+              </div>
+              <div class="card-footer-action">
+                <span>點擊查看專案詳情</span>
+                <span>↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 作品 2 -->
+          <article class="project-card" onclick="openModal(2)">
+            <div class="project-thumb">
+              <span class="project-category">媒體公關／餐飲活動</span>
+              <img 
+                src="work2.jpg" 
+                alt="2026 首爾美食節" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://picsum.photos/seed/seoul-food/800/500';"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="font-serif">2026 首爾美食節｜餐飲公關與媒體溝通</h3>
+              <p class="project-desc">以韓式美食節的餐飲特色為切角，整合新聞稿、媒體資料與活動對外說明，增加報導吸引力。</p>
+              <div class="project-tools">
+                <span class="tool-tag">新聞稿寫作</span>
+                <span class="tool-tag">媒體聯繫</span>
+                <span class="tool-tag">素材整理</span>
+              </div>
+              <div class="card-footer-action">
+                <span>點擊查看專案詳情</span>
+                <span>↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 作品 3 -->
+          <article class="project-card" onclick="openModal(3)">
+            <div class="project-thumb">
+              <span class="project-category">品牌活動／公關企劃</span>
+              <img 
+                src="work3.jpg" 
+                alt="2025 週年慶" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://picsum.photos/seed/anniversary-event/800/500';"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="font-serif">2025 週年慶｜住房與餐飲話題整合</h3>
+              <p class="project-desc">串聯週年住房方案、餐飲亮點與酒吧合作話題，強化品牌活動的整體敘事層次。</p>
+              <div class="project-tools">
+                <span class="tool-tag">新聞稿編輯</span>
+                <span class="tool-tag">品牌文案</span>
+                <span class="tool-tag">專案彙整</span>
+              </div>
+              <div class="card-footer-action">
+                <span>點擊查看專案詳情</span>
+                <span>↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 作品 4 -->
+          <article class="project-card" onclick="openModal(4)">
+            <div class="project-thumb">
+              <span class="project-category">旅展行銷／新聞稿</span>
+              <img 
+                src="work4.jpg" 
+                alt="2025 春季線上旅展" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://picsum.photos/seed/spring-fair/800/500';"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="font-serif">2025 春季線上旅展｜住房、餐飲與泡湯行銷</h3>
+              <p class="project-desc">以體驗亮點與優惠組合為主軸，將多類商品整理成清楚、易於媒體引用的資訊架構。</p>
+              <div class="project-tools">
+                <span class="tool-tag">新聞稿</span>
+                <span class="tool-tag">產品資料彙整</span>
+                <span class="tool-tag">文案編輯</span>
+              </div>
+              <div class="card-footer-action">
+                <span>點擊查看專案詳情</span>
+                <span>↗</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 服務項目 (Services) -->
+    <section id="services" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">SERVICES</span>
+          <h2 class="section-title">專業服務範疇</h2>
+          <p class="section-desc">結合公關實務與活動企劃歷練，為旅宿與消費品牌打造具傳播力的整合方案。</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 服務 1 -->
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">💡</span>
+            <h3 class="font-serif">品牌整合行銷企劃</h3>
+            <div class="service-target">適合對象：旅宿品牌、行銷團隊及跨通路傳播專案</div>
+            <p class="service-desc">
+              梳理目標客群、檔期定位、產品亮點與核心溝通訊息，整合官網、社群、EDM 等對外內容，建立清晰的傳播節奏。
+            </p>
+            <div class="service-meta">
+              <strong>進行方式：</strong>依專案目標進行需求釐清、企劃提案、部門協作與成效追蹤。
+            </div>
+          </div>
+
+          <!-- 服務 2 -->
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">📰</span>
+            <h3 class="font-serif">媒體公關與新聞稿企劃</h3>
+            <div class="service-target">適合對象：有品牌活動、餐飲新品或專案需對外宣傳之團隊</div>
+            <p class="service-desc">
+              挖掘新聞切角、撰寫符合媒體習慣的專業新聞稿、整理採訪圖文資料，並協助媒體窗口溝通與提問回覆。
+            </p>
+            <div class="service-meta">
+              <strong>進行方式：</strong>依議題時程規劃訊息彙整、精準發稿與後續媒體應對。
+            </div>
+          </div>
+
+          <!-- 服務 3 -->
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">🎪</span>
+            <h3 class="font-serif">活動策劃與專案執行</h3>
+            <div class="service-target">適合對象：規劃品牌活動、實體體驗或主題檔期的企業團隊</div>
+            <p class="service-desc">
+              設計活動主軸、受眾體驗動線與現場流程，落實跨單位溝通協作，並將活動體驗順暢轉化為後續公關素材。
+            </p>
+            <div class="service-meta">
+              <strong>進行方式：</strong>依活動規模規劃前期籌備、現場流程執行及事後成果整合。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 經歷 (Experience) -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">EXPERIENCE</span>
+          <h2 class="section-title">職涯與實踐歷程</h2>
+          <p class="section-desc">在實務推動與內容創作的雙重視角中，持續深化品牌傳播的能量。</p>
+        </div>
+
+        <div class="timeline-wrap">
+          <!-- 經歷 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">2025 – 2026</span>
+              <h3 class="timeline-title font-serif">行銷公關相關職務</h3>
+              <div class="timeline-org">長榮鳳凰酒店（礁溪）</div>
+              <p class="timeline-body">
+                參與住房與餐飲促銷文案、新聞稿與媒體溝通、線上旅展宣傳，以及品牌活動資訊整合。累積旅宿產業跨部門溝通、季節檔期企劃與品牌對外傳播豐富實戰經驗。
+              </p>
+            </div>
+          </div>
+
+          <!-- 經歷 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">持續經營</span>
+              <h3 class="timeline-title font-serif">KOL／自媒體內容創作者</h3>
+              <div class="timeline-org">個人自媒體經營</div>
+              <p class="timeline-body">
+                從受眾角度出發規劃主題、撰寫圖文影音內容並細膩觀察社群互動反饋。將內容創作者的真實敏銳度帶回行銷公關現場，提升品牌溝通的溫度與共鳴。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 專業知識區 (AEO Knowledge) -->
+    <section id="knowledge" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">KNOWLEDGE & INSIGHTS</span>
+          <h2 class="section-title">品牌行銷與公關觀察</h2>
+          <p class="section-desc">以旅宿產業為例，分享整合行銷、新聞媒體溝通、活動策劃與數位宣傳的實務思考。</p>
+        </div>
+
+        <div class="knowledge-grid">
+          <!-- 知識文章 1 -->
+          <article class="knowledge-card">
+            <div>
+              <div class="knowledge-meta">
+                <span>📚 專題文章</span>
+                <span>•</span>
+                <span>更新：2026/11/05</span>
+              </div>
+              <h3 class="font-serif">飯店線上旅展如何整合客房、餐飲與休憩商品？</h3>
+              <p class="knowledge-summary">
+                先依客群區分住宿、餐飲與休憩需求，再統一資訊架構、主視覺與購買動線，讓不同商品各有明確賣點，也能共同傳達品牌價值。
+              </p>
+            </div>
+            <a href="article-hotel-online-travel-fair.html" class="knowledge-btn">
+              <span>閱讀完整解析</span>
+              <span>→</span>
+            </a>
+          </article>
+
+          <!-- 知識文章 2 -->
+          <article class="knowledge-card">
+            <div>
+              <div class="knowledge-meta">
+                <span>📚 專題文章</span>
+                <span>•</span>
+                <span>更新：2026/11/05</span>
+              </div>
+              <h3 class="font-serif">飯店新聞稿如何找到值得媒體報導的切角？</h3>
+              <p class="knowledge-summary">
+                新聞稿不應只列出優惠，而要從新鮮性、特色、消費者需求與可視化素材切入，再用清楚資訊和完整照片降低媒體查證及編輯負擔。
+              </p>
+            </div>
+            <a href="article-hotel-pr-story-angle.html" class="knowledge-btn">
+              <span>閱讀完整解析</span>
+              <span>→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 聯絡方式 (Contact) -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <span class="section-badge">CONTACT</span>
+          <h2 class="font-serif">開啟品牌合作的對話</h2>
+          <p class="contact-lead">
+            歡迎交流品牌行銷、公關與活動企劃相關機會；如欲了解我的履歷或更多專案細節，請透過信箱與我聯繫。
+          </p>
+
+          <div class="contact-actions">
+            <!-- 預設按鈕，可直接置換成個人專屬履歷 PDF 連結 -->
+            <a href="mailto:dingdongstar@example.com" class="btn btn-gold">寫信聯絡我</a>
+            <a href="#" class="btn btn-outline" onclick="showResumeNotice(event)">下載完整履歷 (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand font-serif">
+        <strong>吳佳容 Claire Wu</strong> ｜ 行銷公關經理
+      </div>
+      <div class="footer-links">
+        <a href="#hero">回到頂端</a>
+        <a href="#about">關於我</a>
+        <a href="#portfolio">作品集</a>
+        <a href="#knowledge">知識專欄</a>
+      </div>
+      <div>
+        <small>© 2026 吳佳容 Claire Wu. All rights reserved. 網站建置於 GitHub Pages.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 作品詳情彈出視窗 (Modal) -->
+  <div class="modal-backdrop" id="projectModal" onclick="handleBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <button class="modal-close" onclick="closeModal()" aria-label="關閉視窗">✕</button>
+      <div class="modal-content-wrap">
+        <div class="modal-img-wrap">
+          <img id="modalImg" src="" alt="專案展示圖" />
+        </div>
+        <div class="modal-header-meta">
+          <span class="modal-badge" id="modalCategory">分類</span>
+        </div>
+        <h3 class="modal-title font-serif" id="modalTitle">專案標題</h3>
+
+        <div class="modal-section">
+          <div class="modal-section-title">專案背景與挑戰</div>
+          <p class="modal-section-text" id="modalWhy"></p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-title">我的職責與執行項目</div>
+          <p class="modal-section-text" id="modalRole"></p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-title">專案成果與指標</div>
+          <p class="modal-section-text" id="modalResult"></p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-title">使用工具與協作技能</div>
+          <p class="modal-section-text" id="modalTools"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript 邏輯：深淺色主題切換、作品詳情 Modal、導覽收合 -->
+  <script>
+    // 作品資料庫（嚴格依據資料表內容填入，不捏造外部事實）
+    const projectData = {
+      1: {
+        title: "2026 ITF 線上旅展｜跨產品整合宣傳",
+        category: "整合行銷／線上旅展",
+        img: "work1.jpg",
+        fallbackImg: "https://picsum.photos/seed/travel-fair/900/600",
+        why: "旅展商品橫跨客房、餐飲與休憩，須在有限時間內呈現賣點、價格條件及專案差異，避免資訊雜亂削弱買氣。",
+        role: "參與產品訊息統整、宣傳文案撰寫、活動頁面與素材討論，協助不同單位的優惠重點對齊及動線流暢。",
+        result: "完成線上旅展檔期的對外訊息與活動素材整合；待檔期結算後進一步核對銷售與曝光成果。",
+        tools: "官網內容編修、活動文案、Excel 資料整理、視覺素材協作"
+      },
+      2: {
+        title: "2026 首爾美食節｜餐飲公關與媒體溝通",
+        category: "媒體公關／餐飲活動",
+        img: "work2.jpg",
+        fallbackImg: "https://picsum.photos/seed/seoul-food/900/600",
+        why: "主題餐飲需在同質性高的市場中找到具新聞性的內容，增加受眾理解、引發話題並爭取主流媒體報導機會。",
+        role: "撰寫及整理新聞素材，進行媒體 Email 溝通，主動協助照片、採訪資訊與活動特色提供。",
+        result: "建立完整且可供媒體直接使用的新聞稿及活動圖文資料庫，維持品牌專業傳播形象。",
+        tools: "新聞稿寫作、Email 媒體聯繫、圖片與素材整理"
+      },
+      3: {
+        title: "2025 週年慶｜住房與餐飲話題整合",
+        category: "品牌活動／公關企劃",
+        img: "work3.jpg",
+        fallbackImg: "https://picsum.photos/seed/anniversary-event/900/600",
+        why: "週年活動涵蓋不同消費場景，需要清楚的新聞切角與訊息層次，避免單一優惠淹沒品牌的核心質感與特色。",
+        role: "協助撰寫與統整週年活動對外文案，包括住宿優惠、餐飲內容與「鳳凰飴號」合作亮點之整合宣傳。",
+        result: "順利完成多主題公關宣傳內容整合，使品牌活動具備鮮明的話題性與辨識度。",
+        tools: "新聞稿編輯、品牌文案、專案資訊彙整"
+      },
+      4: {
+        title: "2025 春季線上旅展｜住房、餐飲與泡湯行銷",
+        category: "旅展行銷／新聞稿",
+        img: "work4.jpg",
+        fallbackImg: "https://picsum.photos/seed/spring-fair/900/600",
+        why: "住宿、餐飲與泡湯票券的適用規範各有不同，宣傳時需兼顧產品差異、促銷條件及公關新聞價值。",
+        role: "協助企劃及撰寫旅展新聞稿，整理優惠內容與「鳳凰飴號」相關宣傳訊息，確保資訊精確透明。",
+        result: "成功完成旅展期間的新聞稿發布與對外溝通素材，提供消費者與媒體清晰的購買導引。",
+        tools: "新聞稿、產品資料彙整、文案編輯"
+      }
+    };
+
+    // 1. 深淺色模式切換
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    function applyTheme(isLight) {
+      if (isLight) {
+        document.body.classList.add('light-theme');
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = '深色';
+      } else {
+        document.body.classList.remove('light-theme');
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = '淺色';
+      }
+    }
+
+    // 讀取儲存的主題偏好
+    const savedTheme = localStorage.getItem('cw_theme');
+    if (savedTheme === 'light') {
+      applyTheme(true);
+    } else {
+      applyTheme(false);
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isCurrentlyLight = document.body.classList.contains('light-theme');
+      const targetLight = !isCurrentlyLight;
+      applyTheme(targetLight);
+      localStorage.setItem('cw_theme', targetLight ? 'light' : 'dark');
+    });
+
+    // 2. 手機版導覽選單開關
+    const menuToggleBtn = document.getElementById('menuToggleBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggleBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('active');
+      menuToggleBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    function closeNav() {
+      navLinks.classList.remove('active');
+      menuToggleBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    // 3. 作品詳情彈出視窗 (Modal) 控制
+    const projectModal = document.getElementById('projectModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalWhy = document.getElementById('modalWhy');
+    const modalRole = document.getElementById('modalRole');
+    const modalResult = document.getElementById('modalResult');
+    const modalTools = document.getElementById('modalTools');
+
+    function openModal(id) {
+      const data = projectData[id];
+      if (!data) return;
+
+      modalCategory.textContent = data.category;
+      modalTitle.textContent = data.title;
+      modalWhy.textContent = data.why;
+      modalRole.textContent = data.role;
+      modalResult.textContent = data.result;
+      modalTools.textContent = data.tools;
+
+      // 設定圖片並掛載失敗安全回退
+      modalImg.src = data.img;
+      modalImg.onerror = function() {
+        this.onerror = null;
+        this.src = data.fallbackImg;
+      };
+
+      projectModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // 防止背後滾動
+    }
+
+    function closeModal() {
+      projectModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target === projectModal) {
+        closeModal();
+      }
+    }
+
+    // ESC 鍵關閉 Modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // 履歷下載提示
+    function showResumeNotice(e) {
+      e.preventDefault();
+      const resumeNotice = document.createElement('div');
+      resumeNotice.style.position = 'fixed';
+      resumeNotice.style.bottom = '24px';
+      resumeNotice.style.left = '50%';
+      resumeNotice.style.transform = 'translateX(-50%)';
+      resumeNotice.style.background = 'var(--accent-gold)';
+      resumeNotice.style.color = '#1b2421';
+      resumeNotice.style.padding = '12px 24px';
+      resumeNotice.style.borderRadius = '30px';
+      resumeNotice.style.fontWeight = 'bold';
+      resumeNotice.style.boxShadow = '0 8px 20px rgba(0,0,0,0.3)';
+      resumeNotice.style.zIndex = '2000';
+      resumeNotice.style.transition = 'opacity 0.4s ease';
+      resumeNotice.textContent = '履歷 PDF 檔案整備中，歡迎先點擊「寫信聯絡我」索取！';
+
+      document.body.appendChild(resumeNotice);
+      setTimeout(() => {
+        resumeNotice.style.opacity = '0';
+        setTimeout(() => resumeNotice.remove(), 400);
+      }, 3200);
+    }
+  </script>
+</body>
+</html>
